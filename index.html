@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>WorldExplorer</h1>
+    <form target="#" id="chartConfigurationForm">
+      <select name="" id="countrySelect" required>
+        <option value="">Loading....</option>
+      </select>
+      <select name="" id="indicatorSelect" required>
+        <option value="TOTAL_POPULATION">Total population</option>
+        <option value="TOTAL_MALE_POPULATION">Male population</option>
+        <option value="TOTAL_FEMALE_POPULATION">Female population</option>
+        <option value="ADULT_MALE_LITERACT">Adult male literacy</option>
+        <option value="ADULT_FEMALE_LITERACY">Adult female literacy</option>
+        <option value="LIFE_EXPECTANCY">Life expectancy</option>
+        <option value="ADULT_MALE_SURVIVAL_TO_65"
+          >Adult male survival to 65</option
+        >
+        <option value="ADULT_FEMALE_SURVIVAL_TO_65"
+          >Adult female survival to 65</option
+        >
+      </select>
+      <select name="" id="fromYearSelect">
+        <option value="">Loading...</option>
+      </select>
+      <select name="" id="toYearSelect">
+        <option value="">Loading...</option>
+      </select>
+      <select name="" id="chartTypeSelect">
+        <option value="line">Line</option>
+        <option value="bar">Bar</option>
+        <option value="horizontalBar">Horizontal Bar</option>
+        <option value="polarArea">Polar Area</option>
+        <option value="radar">Radar</option>
+      </select>
+      <input
+        type="button"
+        value="Show"
+        onclick="WorldExplorerController.renderChart();"
+      />
+    </form>
+    <br />
+    <div id="worldExplorerChartContainer">
+      <canvas id="worldExplorerChart"></canvas>
+    </div>
+
+    <!-- <div id="app"></div> -->
+    <!-- <script src="src/index.ts">
+ 
+	</script> -->
+    <script src="world-explorer.ts"></script>
+  </body>
+</html>
